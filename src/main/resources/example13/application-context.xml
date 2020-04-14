@@ -5,16 +5,20 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userDirectory" class="com.luxoft.springioc.example13.LDAPUserDirectory"/>
+    <bean id="userDirectory"
+          class="com.luxoft.springioc.example13.LDAPUserDirectory"/>
 
-    <bean id="loginManager" class="com.luxoft.springioc.example13.LoginManager">
-        <property name="userDirectory" ref="userDirectory"/>
-    </bean>
-    <bean id="userDirectorySearch" class="com.luxoft.springioc.example13.UserDirectorySearch">
-        <property name="userDirectory" ref="userDirectory"/>
-    </bean>
-    <bean id="userInfo" class="com.luxoft.springioc.example13.UserInfo">
-        <property name="ldapUserDirectory" ref="userDirectory"/>
-    </bean>
+    <bean id="loginManager"
+          class="com.luxoft.springioc.example13.LoginManager"
+          autowire="byName"/>
+
+    <bean id="userDirectorySearch"
+          class="com.luxoft.springioc.example13.UserDirectorySearch"
+          autowire="byName"/>
+
+    <bean id="userInfo"
+          class="com.luxoft.springioc.example13.UserInfo"
+          autowire="byType"/>
+
 
 </beans>
