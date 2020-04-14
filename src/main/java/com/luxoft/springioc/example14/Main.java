@@ -14,8 +14,8 @@ public class Main {
 //		UserDirectorySearch userDirectorySearch = (UserDirectorySearch) context.getBean("userDirectorySearch");
 //		System.out.println(userDirectorySearch.getUserDirectory().getClass().getSimpleName());
 
-//		UserInfo userInfo = (UserInfo) context.getBean("userInfo");
-//		System.out.println(userInfo.getLdapUserDirectory().getClass().getName());
+		UserInfo userInfo = (UserInfo) context.getBean("userInfo");
+		System.out.println(userInfo.getLdapUserDirectory().getClass().getName());
 //
 //		System.out.println(loginManager.getUserDirectory() == userDirectorySearch.getUserDirectory());
 //		System.out.println(userInfo.getLdapUserDirectory().getClass().getSimpleName());

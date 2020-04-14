@@ -7,7 +7,7 @@
 
 	<!--<bean id="ud" class="com.luxoft.springioc.example14.LDAPUserDirectory" />-->
 
-	<bean id="uasdd" class="com.luxoft.springioc.example14.LDAPUserDirectory" />
+	<bean id="ldapUserDirectory" class="com.luxoft.springioc.example14.LDAPUserDirectory" />
 
 	<bean id="userDirectory" class="com.luxoft.springioc.example14.DatabaseUserDirectory" />
 
@@ -17,8 +17,8 @@
 	<!--<bean id="userDirectorySearch" class="com.luxoft.springioc.example14.UserDirectorySearch"-->
 		<!--autowire="byName" />-->
 
-	<!--<bean id="userInfo" class="com.luxoft.springioc.example14.UserInfo"-->
-		<!--autowire="byType" >-->
+	<bean id="userInfo" class="com.luxoft.springioc.example14.UserInfo"
+		autowire="byName" />
 
 		<!--<property name="ldapUserDirectory" ref="userDirectory" />-->
 	<!--</bean>-->
